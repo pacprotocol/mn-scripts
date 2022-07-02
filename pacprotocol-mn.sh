@@ -132,7 +132,9 @@ systemctl stop pac.service || true
 	tar -xzvf $file_name$extension
 	rm -r $file_name$extension
 	rm -r -f PACProtocol
-	mv -v $file_name PACProtocol
+	mkdir PACProtocol
+	mv -v pacprotocold PACProtocol
+	mv -v pacprotocol-cli PACProtocol
 	cd PACProtocol
 	chmod +x pacprotocold
 	chmod +x pacprotocol-cli
