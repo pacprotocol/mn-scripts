@@ -48,7 +48,11 @@ if test -e "$file_name$extension"; then
 		rm -r -f PACProtocol
 		tar -xzvf $file_name$extension
 		rm -r $file_name$extension
-		mv -v $file_name PACProtocol
+		mkdir PACProtocol
+		mv -v pacprotocold PACProtocol
+		mv -v pacprotocol-cli PACProtocol
+		mv -v pacprotocol-qt PACProtocol
+		mv -v pacprotocol-tx PACProtocol
 		cd PACProtocol
 		chmod +x pacprotocold
 		chmod +x pacprotocol-cli
@@ -64,15 +68,15 @@ fi
 cd ~
 
 #reindex
-echo "####################################"
-echo "#      Resetting Blockchain data    #"
-echo "####################################"
-cd
-~/PACProtocol/pacprotocold -reindex
-echo "waiting 30 seconds"
-sleep 30
-~/PACProtocol/pacprotocol-cli stop
-sleep 10
+#echo "####################################"
+#echo "#      Resetting Blockchain data    #"
+#echo "####################################"
+#cd
+#~/PACProtocol/pacprotocold -reindex
+#echo "waiting 30 seconds"
+#sleep 30
+#~/PACProtocol/pacprotocol-cli stop
+#sleep 10
 
 #enable the service
 systemctl enable pac.service
