@@ -27,7 +27,7 @@ echo "#   Welcome to the pacprotocol masternode setup   #"
 echo "###################################################"
 echo ""
 echo "Running this script as root on Ubuntu 20.04 LTS is highly recommended."
-echo "Please note that this script will try to configure 3 GB of swap - the combined value of memory and swap should be at least 4 GB. Use the command 'free -h' to check the values (under 'Total')." 
+echo "Please note that this script will try to configure 11 GB of swap - the combined value of memory and swap should be at least 12 GB. Use the command 'free -h' to check the values (under 'Total')." 
 echo ""
 sleep 10
 #ipaddr="$(dig +short myip.opendns.com @resolver1.opendns.com)"
